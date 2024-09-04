@@ -60,6 +60,12 @@ function App(){
   );
 }
 
-
-
+function Header()
+{
+  return(
+  <Header className ="header">
+    <h1>Fast React Pizza co.</h1>
+  </Header>
+  );
+}
 
