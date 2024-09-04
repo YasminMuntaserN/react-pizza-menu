@@ -58,12 +58,13 @@ function App(){
   );
 }
 
+
 function Header()
 {
   return(
-  <Header className ="header">
+  <header className ="header">
     <h1>Fast React Pizza co.</h1>
-  </Header>
+  </header>
   );
 }
 
@@ -89,7 +90,7 @@ return (
         </ul>
         </React.Fragment>
           ) : (
-            <p>we're still working on our menu . please come back later :)</p>
+            <p>we're still working on our menu . please come back later </p>
           )} 
       </main>
 );
@@ -124,7 +125,7 @@ function Order({closeHour}){
 function Pizza({pizzaObj}){ 
   console.log("props: " + pizzaObj);
   return (
-  <li className={`Pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
+  <li className={`pizza  ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={pizzaObj.photoName} alt={pizzaObj.name}/>
       <h3>{pizzaObj.name}</h3>
       <p>{pizzaObj.ingredients}</p>
@@ -133,11 +134,11 @@ function Pizza({pizzaObj}){
       <span> {pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
   </li>
   );
-  }
+}
   
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  //root.render(<App/>);  
-  root.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
-      <App/>
-  </React.StrictMode>);  
+    <App />
+  </React.StrictMode>
+);
