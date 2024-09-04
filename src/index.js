@@ -97,3 +97,26 @@ return (
 );
 }
 
+function Footer()
+{
+  const openHour = 12;
+  const closeHour = 22;
+  const hour =new Date().getHours();
+  const isOpen =hour >= openHour && hour <= closeHour;
+
+    return( 
+    <footer className="footer">
+      {isOpen ? <Order closeHour={closeHour}/> :
+      <p>we're  happy to welcome you bettwen {openHour}:00 and {closeHour}:00</p>
+      }
+        </footer>
+  );
+  //  React.createElement('footer', null ,"we're curently open");
+  }
+
+
+
+
+
+
+
